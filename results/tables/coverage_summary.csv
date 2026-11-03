@@ -1,0 +1,2 @@
+sample_size,n_simulations,n_bootstrap,confidence_level,true_mean,intervals_covered,intervals_missed,empirical_coverage,average_ci_width,coverage_difference
+100,1000,500,0.95,50,940,60,0.94,3.850629449626988,-0.010000000000000009

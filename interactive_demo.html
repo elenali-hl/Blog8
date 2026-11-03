@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Interactive Bootstrap Simulation</title>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 950px;
+      margin: 35px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #264653;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-weight: bold;
+    }
+
+    select, button {
+      padding: 9px;
+      font-size: 15px;
+    }
+
+    button {
+      background: #264653;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #sim-results {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    #bootstrap-plot {
+      width: 100%;
+      height: 480px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Interactive Bootstrap Confidence Intervals</h1>
+
+  <p>
+    Change the simulation parameters and click
+    Run Simulation to see how the bootstrap
+    distribution and confidence interval change.
+  </p>
+
+  <div class="controls">
+
+    <label>
+      Sample Size
+      <select id="sim-n">
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100" selected>100</option>
+        <option value="200">200</option>
+        <option value="300">300</option>
+      </select>
+    </label>
+
+    <label>
+      Bootstrap Resamples
+      <select id="sim-b">
+        <option value="100">100</option>
+        <option value="500">500</option>
+        <option value="1000" selected>1000</option>
+        <option value="2000">2000</option>
+      </select>
+    </label>
+
+    <label>
+      Confidence Level
+      <select id="sim-level">
+        <option value="0.90">90%</option>
+        <option value="0.95" selected>95%</option>
+        <option value="0.99">99%</option>
+      </select>
+    </label>
+
+    <label>
+      True Population Mean
+      <select id="sim-mu">
+        <option value="40">40</option>
+        <option value="45">45</option>
+        <option value="50" selected>50</option>
+        <option value="55">55</option>
+        <option value="60">60</option>
+      </select>
+    </label>
+
+  </div>
+
+  <button id="run-simulation">
+    Run Simulation
+  </button>
+
+  <p id="sim-results"></p>
+
+  <div id="bootstrap-plot"></div>
+
+  <p>
+    Dashed orange lines show the bootstrap confidence
+    interval. The dotted dark line shows the sample
+    mean, and the green line shows the true population
+    mean.
+  </p>
+
+  <script src="code/05_interactive_simulation.js"></script>
+
+</body>
+</html>

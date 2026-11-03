@@ -1,0 +1,2 @@
+sample_size,sample_mean,sample_sd,sample_median,sample_min,sample_max,standard_error,true_population_mean,true_population_sd
+100,50.386424782655865,11.025065407825073,51.77788863587362,25.652829571278634,80.43646864166483,1.1025065407825072,50,10

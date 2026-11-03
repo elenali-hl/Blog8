@@ -1,0 +1,2 @@
+sample_size,n_bootstrap,confidence_level,original_mean,bootstrap_mean,bootstrap_se,ci_lower,ci_upper,ci_width,true_population_mean,contains_true_mean
+100,2000,0.95,50.386424782655865,50.40856784798975,1.0759108462573321,48.21050947829013,52.48039542612007,4.269885947829941,50,TRUE

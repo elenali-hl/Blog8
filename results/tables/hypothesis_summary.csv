@@ -1,0 +1,2 @@
+sample_size,n_simulations,null_mean,significance_level,critical_t,empirical_type1_error,theoretical_type1_error
+100,10000,50,0.05,1.9842169515864174,0.0512,0.05
